@@ -5,7 +5,6 @@ import (
 	"encoding/base64"
 	"fmt"
 	"io"
-	"log"
 	"mime"
 	"net/http"
 	"os"
@@ -113,7 +112,6 @@ func (cfg *apiConfig) handlerUploadThumbnail(w http.ResponseWriter, r *http.Requ
 
 	// Use relative URL (to be served by your API)
 	publicURL := cfg.getAssetURL(assetPath)
-	log.Println(publicURL)
 
 	video.ThumbnailURL = &publicURL
 

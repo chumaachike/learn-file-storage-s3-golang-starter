@@ -25,7 +25,7 @@ type apiConfig struct {
 	s3Region         string
 	s3CfDistribution string
 	port             string
-	s3client         *s3.Client
+	s3Client         *s3.Client
 }
 
 type thumbnail struct {
@@ -110,7 +110,7 @@ func main() {
 		s3Region:         s3Region,
 		s3CfDistribution: s3CfDistribution,
 		port:             port,
-		s3client:         s3Client,
+		s3Client:         s3Client,
 	}
 
 	err = cfg.ensureAssetsDir()
